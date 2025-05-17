@@ -287,8 +287,12 @@ app.layout.children.append(
                         className="text-center text-muted mt-5 mb-3"), justify="center")
 )
 
+if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 10000))
+    app.run(debug=False, host="0.0.0.0", port=port)
 
-if __name__ == '__main__':
-   app.run(debug=False, host="0.0.0.0", port=7860)
+#if __name__ == '__main__':
+   #app.run(debug=False, host="0.0.0.0", port=7860)
 
 
