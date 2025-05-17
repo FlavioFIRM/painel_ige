@@ -1,0 +1,9 @@
+dash
+dash-bootstrap-components
+plotly
+pandas
+numpy
+scikit-learn
+wordcloud
+xhtml2pdf
+Pillow
