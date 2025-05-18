@@ -145,6 +145,9 @@ app.layout = dbc.Container([
              dbc.Col(dcc.Graph(id="grafico-risco"), md=6)]),
     dbc.Row([dbc.Col(dcc.Graph(id="grafico-velocimetro"), md=12)]),
     dbc.Row([dbc.Col(html.Div(id="lista-uges-risco"), md=12)]),
+    dbc.Row([
+    dbc.Col(html.Img(src=img_src, style={"width": "100%", "border": "1px solid #ccc"}))
+], className="my-4"),
     dbc.Row([dbc.Col(dcc.Graph(id="grafico-importancia"), md=12)])
 ], fluid=True)
 
