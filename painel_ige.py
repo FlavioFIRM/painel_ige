@@ -287,7 +287,7 @@ app.layout.children.append(
     dbc.Row([
         dbc.Col(html.Img(
             src=img_src,
-            style={"width": "40%", "border": "1px solid #ccc", "display": "block", "margin": "auto"}
+            style={"width": "60%", "border": "1px solid #ccc", "display": "block", "margin": "auto"}
         ))
     ], className="my-4")
 )
