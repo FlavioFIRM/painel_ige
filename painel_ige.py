@@ -146,10 +146,8 @@ app.layout = dbc.Container([
     dbc.Row([dbc.Col(dcc.Graph(id="grafico-velocimetro"), md=12)]),
     dbc.Row([dbc.Col(html.Div(id="lista-uges-risco"), md=12)]),
     dbc.Row([dbc.Col(dcc.Graph(id="grafico-importancia"), md=12)])
-    ], fluid=True),
-    dbc.Row([
-        dbc.Col(html.Img(src=img_src, style={"width": "60%", "border": "1px solid #ccc"}))
-    ], className="my-4"),
+    ], fluid=True)
+    
 
 @app.callback(
     Output("resultado-simulador", "children"),
@@ -284,6 +282,16 @@ def actualizar_graficos(f_ano, f_uge, f_estado):
     }
 
     return fig4, fig1, fig2, fig3, alerta_style, lista_header, figuras_json
+
+app.layout.children.append(
+    dbc.Row([
+        dbc.Col(html.Img(
+            src=img_src,
+            style={"width": "40%", "border": "1px solid #ccc", "display": "block", "margin": "auto"}
+        ))
+    ], className="my-4")
+)
+
 
 app.layout.children.append(
     dbc.Row(html.Footer("Protótipo desenvolvido com Dash e IA aplicada ao controlo interno. © IGE 2025", 
